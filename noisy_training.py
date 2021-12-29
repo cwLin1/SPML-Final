@@ -176,13 +176,13 @@ for Round in range(Rounds):
     
         S = sorted(range(len(T)), key=lambda k: T[k])
         # d = T[S[int(len(M) * (1 - 0.25 * (1 - (Round / Rounds))))]]
-        rl = T[S[int(len(M) * (1 - 0.5))]]
-        d = T[S[int(len(M) * (1 - 0.25))]]
+        rl = T[S[int(len(M) * (1 - 0.5)) - 1]]
+        d = T[S[int(len(M) * (1 - 0.25)) - 1]]
         # rl = T[S[int(500*(1-0.1))]]
         for i, r in enumerate(R):
             if y_shifted[i, catagory] == 1 and T[T_index[i]] < d:
                 preserved_index.append(i)
-            if y_shifted[i, catagory] == 1 and T[T_index[i]] < rl:
+            if y_shifted[i, catagory] == 1 and T[T_index[i]] >= rl:
                 relabel_index.append(i)
                 
     
