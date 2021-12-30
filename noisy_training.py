@@ -84,7 +84,7 @@ Label_Accuracy = []
 Test_Accuracy = []
 Test_Accurracy_0 = []
 
-Rounds = 16
+Rounds = 32
 
 
 for Round in range(Rounds):
