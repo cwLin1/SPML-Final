@@ -6,7 +6,7 @@ noisy_training.py: 對於 noisy label 的訓練演算法  <br /><br />
 
 演算法: Multi-Model Multi-Round Outlier Removal Label Refurbishment Learning Algorithm
 
-(其實就是整合論文提供的訓練方法XD)  <br /><br />
+(其實就是整合論文提供的一些建議訓練方法XD)  <br /><br />
   
   
 
