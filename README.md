@@ -8,7 +8,7 @@ noisy_training.py: 對於 noisy label 的訓練演算法
 
 (其實就是整合論文提供的訓練方法XD)
 
-\ 
+\indent 
 
 每輪訓練使用一個 model，計算 Feature Space，將部分 Outlier Sample 移除
 
@@ -16,6 +16,6 @@ noisy_training.py: 對於 noisy label 的訓練演算法
 
 然後跑下一輪訓練
 
-\ 
+\indent 
 
 因為 Dropout Layer 的隨機性，每次訓練結果不盡相同，運氣好可以達到 90% 以上的 Test Accuracy
