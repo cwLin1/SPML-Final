@@ -14,7 +14,10 @@ noisy_training.py: 對於 noisy label 的訓練演算法
 
 接著用另一個 model，使用剩下的資料訓練，然後用此 model 翻新 Label
 
-然後跑下一輪訓練  
+然後跑下一輪訓練    
+  
+    
+    
   
   
   
