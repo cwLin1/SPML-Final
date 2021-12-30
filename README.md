@@ -2,7 +2,7 @@
 
 train.py: 自然訓練演算法，用來跟實驗結果比較
 
-noisy_training.py: 對於 noisy label 的訓練演算法
+noisy_training.py: 對於 noisy label 的訓練演算法  <br /><br />
 
 演算法: Multi-Model Multi-Round Outlier Removal Label Refurbishment Learning Algorithm
 
