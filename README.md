@@ -15,11 +15,6 @@ noisy_training.py: 對於 noisy label 的訓練演算法
 接著用另一個 model，使用剩下的資料訓練，然後用此 model 翻新 Label
 
 然後跑下一輪訓練    
-  
     
-    
-  
-  
-  
 因為 Dropout Layer 的隨機性，每次訓練結果不盡相同，運氣好可以達到 90% 以上的 Test Accuracy
 
