@@ -84,7 +84,7 @@ Label_Accuracy = []
 Test_Accuracy = []
 Test_Accurracy_0 = []
 
-Rounds = 32
+Rounds = 16
 
 
 for Round in range(Rounds):
@@ -176,14 +176,15 @@ for Round in range(Rounds):
     
         S = sorted(range(len(T)), key=lambda k: T[k])
         # d = T[S[int(len(M) * (1 - 0.25 * (1 - (Round / Rounds))))]]
-        rl = T[S[int(len(M) * (1 - 0.5)) - 1]]
-        d = T[S[int(len(M) * (1 - 0.25)) - 1]]
+        d = T[S[int(len(M) * (1 - 0.25 * 0.5**Round))]]
+        # rl = T[S[int(len(M) * (1 - 0.5**Round))]]
+        # d = T[S[int(len(M) * (1 - 0.25))]]
         # rl = T[S[int(500*(1-0.1))]]
         for i, r in enumerate(R):
             if y_shifted[i, catagory] == 1 and T[T_index[i]] < d:
                 preserved_index.append(i)
-            if y_shifted[i, catagory] == 1 and T[T_index[i]] >= rl:
-                relabel_index.append(i)
+            # if y_shifted[i, catagory] == 1 and T[T_index[i]] >= rl:
+            #     relabel_index.append(i)
                 
     
     preserved_index.sort()
@@ -235,8 +236,9 @@ for Round in range(Rounds):
     y_new_pred = model.predict(X, verbose=1)
     y_new = np.argmax(y_new_pred, axis = 1)
     
-    for i in relabel_index:
-        if max(y_new_pred[i]) > 0.9: 
+    # for i in relabel_index:
+    for i in range(1000):
+        if max(y_new_pred[i]) > 0.99: 
             y_shifted[i] = to_categorical(y_new, 2)[i]
     
     print('Round: ', Round)
