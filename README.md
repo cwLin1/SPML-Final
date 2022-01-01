@@ -17,7 +17,7 @@ noisy_training.py: 對於 noisy label 的訓練演算法  <br /><br />
 因為 Dropout Layer 的隨機性，每次訓練結果不盡相同，Label Accuracy 大約能達到 85%-88% 左右，Test Accuracy 能達到 88% 以上，
 有時候運氣好可以達到 90% 以上的 Test Accuracy<br /><br />
 
-結果比較: (r:= label noise ratio)
+結果比較: (r := label noise ratio)
 
 * r = 0.1:
   * natural training: 0.88
