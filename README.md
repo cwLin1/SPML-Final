@@ -34,3 +34,7 @@ noisy_training.py: 對於 noisy label 的訓練演算法  <br /><br />
   * noisy training: 0.915
   * Label Accuracy: 0.883
 
+* r = 0.3:
+  * natural training: 0.635
+  * noisy training: 
+  * Label Accuracy: 
