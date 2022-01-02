@@ -84,7 +84,7 @@ Label_Accuracy = []
 Test_Accuracy = []
 Test_Accurracy_0 = []
 
-Rounds = 32
+Rounds = 64
 
 
 for Round in range(Rounds):
@@ -176,7 +176,7 @@ for Round in range(Rounds):
     
         S = sorted(range(len(T)), key=lambda k: T[k])
         # d = T[S[int(len(M) * (1 - 0.25 * (1 - (Round / Rounds))))]]
-        d = T[S[int(len(M) * (1 - 0.25 * 0.5**Round))]]
+        d = T[S[int(len(M) * (1 - 0.25 * 0.5**Round))-1]]
         # rl = T[S[int(len(M) * (1 - 0.5**Round))]]
         # d = T[S[int(len(M) * (1 - 0.25))]]
         # rl = T[S[int(500*(1-0.1))]]
